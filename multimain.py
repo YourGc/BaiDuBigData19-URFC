@@ -245,5 +245,6 @@ def main():
     best_model = torch.load("%s/%s_fold_%s_model_best_loss.pth.tar"%(config.best_models,config.model_name,str(fold)))
     model.load_state_dict(best_model["state_dict"])
     test(test_loader,model,fold)
+
 if __name__ == "__main__":
     main()

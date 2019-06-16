@@ -242,7 +242,7 @@ def DPN92():
 
 
 class MultiModalNet(nn.Module):
-    def __init__(self, backbone1, backbone2, drop, pretrained=True):
+    def __init__(self, backbone1, backbone2, drop, pretrained=False):
         super().__init__()
         if pretrained:
             img_model = pretrainedmodels.__dict__[backbone1](num_classes=1000, pretrained='imagenet') #seresnext101
