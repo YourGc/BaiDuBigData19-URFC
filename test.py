@@ -30,7 +30,7 @@ def main(fold):
     args = get_args(mdl_path)
     model = MultiModalNet("se_resnext101_32x4d", "dpn26", 0.5)
     model_dict = torch.load(args.model_path)
-    model.load_state_dict(model_dict)
+    model.load_state_dict(model_dict['state_dict'])
 
     model.to(device)
     model.eval()
