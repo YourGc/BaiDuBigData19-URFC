@@ -1,6 +1,6 @@
 # coding:utf-8
 import argparse
-import config
+from config import config
 from multimain import test
 import torch
 import numpy as np
